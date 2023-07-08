@@ -2,14 +2,14 @@ const { Schema, model } = require("mongoose");
 
 const vaccineSchema = new Schema(
   {
-    vaccinename: {
+    vaccineName: {
       type: String,
       required: [true, "Vaccine's name is required."],
     },
     description: {
       type: String,
     },
-    vaccinationage: {
+    vaccinationAge: {
       type: Number,
       required: [true, "Vaccination age is required."],
     },

@@ -25,9 +25,9 @@ router.get("/vaccines", (req, res, next) => {
 });
 
 router.post("/vaccines", (req, res, next) => {
-  const { vaccinename, description, vaccinationage } = req.body;
+  const { vaccineName, description, vaccinationAge } = req.body;
 
-  Vaccine.create({ vaccinename, description, vaccinationage }).then(
+  Vaccine.create({ vaccineName, description, vaccinationAge }).then(
     (newVaccine) => {
       res.status(200).json(newVaccine);
     }
@@ -37,6 +37,13 @@ router.post("/vaccines", (req, res, next) => {
 router.get("/citizen", (req, res, next) => {
   Citizen.find().then((allCitizens) => {
     res.status(200).json(allCitizens);
+  });
+});
+
+router.get("/:healthcard", (req, res, next) => {
+  const healthcard = req.params.healthcard;
+  Citizen.findOne({ healthcard: healthcard }).then((thisCitizen) => {
+    res.status(200).json(thisCitizen);
   });
 });
 
