@@ -6,6 +6,10 @@ const citizenSchema = new Schema(
       type: String,
       required: [true, "Child's name is required."],
     },
+    healthcard: {
+      type: String,
+      required: [true, "Child's healthcard is required."],
+    },
     vaccines: {
       type: Array,
       // required: [true, "Vaccines Array is required."],

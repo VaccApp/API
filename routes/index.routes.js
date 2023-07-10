@@ -48,8 +48,8 @@ router.get("/:healthcard", (req, res, next) => {
 });
 
 router.post("/citizen", (req, res, next) => {
-  const { childname, vaccines } = req.body;
-  Citizen.create({ childname, vaccines })
+  const { childname, vaccines, healthcard } = req.body;
+  Citizen.create({ childname, healthcard, vaccines })
     .then((newCitizen) => {
       res.status(200).json(newCitizen);
     })
