@@ -70,6 +70,11 @@ router.get("/citizen/:childId", (req, res, next) => {
   });
 });
 
-router.get("/centers", (req, res, next) => {});
+router.get("/centers", async (req, res, next) => {
+  const call = await axios.get(
+    "https://datos.madrid.es/egob/catalogo/201544-0-centros-salud.csv"
+  );
+  res.status(200).json(call);
+});
 
 module.exports = router;
