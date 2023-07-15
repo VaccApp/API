@@ -24,6 +24,13 @@ router.get("/vaccines", (req, res, next) => {
   });
 });
 
+router.get("/vaccines/:vaccineId", (req, res, next) => {
+  const { vaccineId } = req.params;
+  Vaccine.findById(vaccineId).then((oneVaccine) => {
+    res.status(200).json(oneVaccine);
+  });
+});
+
 router.post("/vaccines", (req, res, next) => {
   const { vaccineName, description, vaccinationAge } = req.body;
 
