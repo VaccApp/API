@@ -24,6 +24,14 @@ router.get("/vaccines", (req, res, next) => {
   });
 });
 
+router.get("/:healthcard", (req, res, next) => {
+  const { healthcard } = req.params;
+  console.log("health", healthcard);
+  Citizen.find({ healthcard: healthcard }).then((citizen) => {
+    res.status(200).json(citizen);
+  });
+});
+
 router.get("/vaccines/:vaccineId", (req, res, next) => {
   const { vaccineId } = req.params;
   Vaccine.findById(vaccineId).then((oneVaccine) => {
