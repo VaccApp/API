@@ -102,7 +102,7 @@ VaccApp is an online tool that allows you to replace the classic vaccination car
 
 [Client repository Link](https://github.com/VaccApp/Client)
 
-[Deploy Link](https://vaccapp.netlify.app/)
+[Deploy Link](https://api-madrid.fly.dev/)
 
 ### Slides
 
