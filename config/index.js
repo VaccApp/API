@@ -29,7 +29,7 @@ module.exports = (app) => {
   // );
   app.use(
     cors({
-      origin: ["https://vaccapp.netlify.app/", process.env.ORIGIN],
+      origin: ["https://vaccapp.netlify.app", process.env.ORIGIN],
       credentials: true,
     })
   );
