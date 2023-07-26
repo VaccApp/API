@@ -88,7 +88,7 @@ VaccApp is an online tool that allows you to replace the classic vaccination car
 
 ## Backlog
 
-- Any
+- User with multiple families.
 
 ## Links
 
@@ -106,4 +106,4 @@ VaccApp is an online tool that allows you to replace the classic vaccination car
 
 ### Slides
 
-[Slides Link](https://docs.google.com)
+[Slides Link](https://slides.com/vaccapp/deck)
